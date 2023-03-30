@@ -116,17 +116,13 @@ $$ a_{mean} = \frac{1}{n}\sum_{i=0}^{n-1}{a[i]} $$
 ### (e) `get_median(arr)` 구현하기 [10점]
 - 배열 `arr`에서 중간값을 구하는 함수를 구현.
 - 중간값은 다음과 같이 구할 수 있음.
-- 여기서 주의해야 될 점은, $\frac{n}{2}$은 인덱스로 사용할 수 있는 정수를 의미함; 파이썬에서 `n // 2`로 구할 수 있음.
 
+    - n이 홀수: $median = arr\Big[\frac{n}{2}\Big]$
 
-<div align="center">
+    - n이 짝수: $median = \frac{1}{2}\Bigg(arr\Big[\frac{n}{2}-1\Big] + arr\Big[\frac{n}{2}\Big]\Bigg)$
 
-| 조건 | 수식 |
-|---|---|
-| n이 홀수 | $$ median = arr\Big[\frac{n}{2}\Big]  $$ |
-| n이 짝수 | $$ median = \frac{1}{2}\Bigg(arr\Big[\frac{n}{2}-1\Big] + arr\Big[\frac{n}{2}\Big]\Bigg) $$ |
+- 여기서 주의해야 될 점은, $\frac{n}{2}$이 인덱스로 사용할 수 있는 정수를 의미한다는 것 (파이썬에서 `n // 2`로 구할 수 있음).
 
-</div>
 
 ## 문제(2) 파일 및 디렉토리 경로 관리 함수 구현하기
 - 파일 및 디렉토리 경로(path)를 다루는 기본적인 함수를 구현해 봅시다.
